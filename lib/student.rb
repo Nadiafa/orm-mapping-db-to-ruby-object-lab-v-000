@@ -77,7 +77,7 @@ class Student
       SQL
     DB[:conn].execute(sql, x).map do |row|
       self.new_from_db(row)
-    end
+    end.first
   end 
   # def self.all_students_in_grade_X
   #     # returns an array of all students in a given grade X
